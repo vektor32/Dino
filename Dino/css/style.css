@@ -1,0 +1,27 @@
+
+
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.jatek {
+    position: relative;
+    width: 1100px;
+    height: 300px;
+    overflow: hidden;
+
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.object {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
