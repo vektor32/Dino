@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,34 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Dino</title>
 </head>
-<body class="p-5">
+
+<body class="">
     <header>
         <div class="container">
             <nav>
                 <ul class="d-flex justify-content-evenly">
-                    <li><a href="#">Helyezések</a></li>
-                    <li><a href="#">Játék</a></li>
-                    <li><a href="#">Rólunk</a></li>
-                    <li>Bejelentkezés</li>
+                    <li><a href="#place">Helyezések</a></li>
+                    <li><a href="#game">Játék</a></li>
+                    <li><a href="#aboutUs">Rólunk</a></li>
+                    <li><button type="button" class="btn btn-info" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Bejelentkezés</button></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section>
+        <section id="game">
             <h1 class="text-center">Játék</h1>
             <div class="jatek">
                 <p><img class="w-100" src="img/background.png" alt="Jatek ter" title="Jatek ter"></p>
             </div>
         </section>
-        <section class="border-t border-b">
+        <section class="border-t border-b" id="place">
             <div class="container">
                 <div class="row">
+                    <h2 class="border-b">Helyezések</h2>
                     <div class="col-lg-6">
-                        <h2 class="border-b">Helyezések</h2>
+
                     </div>
                     <div class="col-lg-6">
 
@@ -39,25 +43,105 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="aboutUs">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <h2>Rólunk</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ea et corrupti ipsum explicabo voluptatum impedit odit assumenda nemo, repudiandae adipisci culpa, laboriosam quam tenetur nostrum quisquam labore. Provident, quae! Et illum placeat harum maiores. Fuga debitis porro harum provident consequuntur placeat. Nulla, nemo cupiditate. Non, distinctio sed? Ipsa officiis sed consequatur temporibus asperiores saepe a, quisquam earum excepturi id provident ab reiciendis explicabo maiores illo magnam aliquam repellat eius vero quo voluptatibus minima aspernatur nostrum quae? Ex quaerat aperiam maiores a recusandae asperiores magni consequatur corrupti officia sed eius tempora sequi fugiat esse pariatur, rem totam ad eveniet voluptatibus!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ea et corrupti ipsum explicabo
+                            voluptatum impedit odit assumenda nemo, repudiandae adipisci culpa, laboriosam quam tenetur
+                            nostrum quisquam labore. Provident, quae! Et illum placeat harum maiores. Fuga debitis porro
+                            harum provident consequuntur placeat. Nulla, nemo cupiditate. Non, distinctio sed? Ipsa
+                            officiis sed consequatur temporibus asperiores saepe a, quisquam earum excepturi id
+                            provident ab reiciendis explicabo maiores illo magnam aliquam repellat eius vero quo
+                            voluptatibus minima aspernatur nostrum quae? Ex quaerat aperiam maiores a recusandae
+                            asperiores magni consequatur corrupti officia sed eius tempora sequi fugiat esse pariatur,
+                            rem totam ad eveniet voluptatibus!</p>
                     </div>
                     <div class="col-lg-6">
-                        <p><img class="w-50" src="img/chalk.png" alt=""></p>
+                        <p><img class="w-50" src="" alt=""></p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="mt-4 pt-3">
-        <p class="text-center">Minden jóg fenntartva!</p>
+    <footer class="mt-4 py-3 bg-black text-white">
+        <p class="text-center m-0">Minden jog fenntartva!</p>
     </footer>
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="bejelentkezes">
+                    <div class="modal-header">
+                        <h5 class="modal-title ms-3" id="exampleModalLabel">Bejelentkezés</h5>
+                        <button type="button" class="btn-close me-3" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3 needs-validation justify-content-center" novalidate>
+                            <div class="col-md-12">
+                                <label for="validationCustom01" class="form-label">Kereszt név:</label>
+                                <input type="text" class="form-control validationCustom01" id="validationCustom01" required>
+                                <div class="invalid-feedback">
+                                        <p class="keresztNev"></p>
+                                </div>
+                                <div class="valid-feedback">
+                                        <p class="keresztNev"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="validationCustom02" class="form-label">Vezeték név:</label>
+                                <input type="text" class="form-control validationCustom02" id="validationCustom02" required>
+                                 <div class="invalid-feedback">
+                                        <p class="vezetekNev"></p>
+                                </div>
+                                <div class="valid-feedback">
+                                        <p class="vezetekNev"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="validationCustomUsername" class="form-label">Felhasználó név:</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control validationCustomUsername" id="validationCustomUsername"
+                                        aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-feedback">
+                                        <p class="felhasznaloNev"></p>
+                                </div>
+                                <div class="valid-feedback">
+                                        <p class="felhasznaloNev"></p>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="validationCustom03" class="form-label">Email cím:</label>
+                                <input type="email" class="form-control validationCustom03" id="validationCustom03" required>
+                                <div class="invalid-feedback">
+                                        <p class="emailCim"></p>
+                                </div>
+                                <div class="valid-feedback">
+                                        <p class="emailCim"></p>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary px-4 py-2 rounded-5 w-50 login"
+                                type="button">Bejelentkezés</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Felhasznalo.js"></script>
+    <script src="js/bejelentkezes.js"></script>
     <script src="js/DinosJatek.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
