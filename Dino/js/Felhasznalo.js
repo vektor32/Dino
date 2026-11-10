@@ -71,5 +71,3 @@ class Felhasznalo {
         return "Kereszt név:" + this.getKeresztNev() + ", Vezeték név: " + this.getVezetekNev() + ", Felhasználó név: " + this.getFelhasznaloNev() + ", email: " + this.getEmail()
     }
 }
-
-

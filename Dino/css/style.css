@@ -1,25 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    font-style: normal;
+    font-weight: 400;
+}
 
+main{
+    background-color: #efefef;
+}
 
-nav ul li{
-    list-style-type: none;
+ul li{
+    list-style-type: none;  
+}
+.alma{
+    overflow:auto; 
+    height:200px;
 }
 nav ul li a{
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    font-size: 17px;
 }
-
+a:hover{
+    color: rgb(79, 146, 79);
+    font-weight: 500;
+    border-radius: 3px;
+}
 .jatek {
-    position: relative ;
-    width: 90%;
-    height: 300px;
+    position: relative;
+    height: 38vh;
     overflow: hidden;
-    margin-left: 60px;
+    background-image: url("../img/background.png");
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
-
 .object {
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 .modal-content{
@@ -27,9 +48,18 @@ nav ul li a{
     margin-left: -50px;
     border-radius: 0;
 }
-
 .bejelentkezes{
     background-color: rgb(224, 199, 248);
     border-radius: 25px;
     margin: 25px;
+}
+.score{
+    background-color: rgba(249, 248, 250, 0.692);
+    margin: auto 0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-weight: 600;
+    z-index: 10;
+    padding: 10px 20px;
 }

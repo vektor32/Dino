@@ -9,69 +9,82 @@
     <title>Dino</title>
 </head>
 
-<body class="">
-    <header>
+<body>
+    <header class="bg-black text-white p-3">
         <div class="container">
             <nav>
-                <ul class="d-flex justify-content-evenly">
-                    <li><a href="#place">Helyezések</a></li>
-                    <li><a href="#game">Játék</a></li>
-                    <li><a href="#aboutUs">Rólunk</a></li>
-                    <li><button type="button" class="btn btn-info" data-bs-toggle="modal"
+                <ul class="d-flex justify-content-evenly align-items-center m-0">
+                    <li><a href="#">Helyezések</a></li>
+                    <li><a href="#">Játék</a></li>
+                    <li><a href="#">Rólunk</a></li>
+                    <li><button type="button" class="btn btn-success" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Bejelentkezés</button></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
-        <section id="game">
-            <h1 class="text-center">Játék</h1>
-            <div class="jatek">
-                <p><img class="w-100" src="img/background.png" alt="Jatek ter" title="Jatek ter"></p>
-            </div>
-        </section>
-        <section class="border-t border-b" id="place">
-            <div class="container">
-                <div class="row">
-                    <h2 class="border-b">Helyezések</h2>
-                    <div class="col-lg-6">
-
-                    </div>
-                    <div class="col-lg-6">
-
+    <main class="px-5 py-4">
+        <div class="container">
+            <section id="game">
+                <h1 class="text-center mb-4">Játék</h1>
+                <div class="jatek m-5 border border-success border-5 rounded-3">
+                    <div class="score">Idő: <span></span></div>
+                </div>
+            </section>
+            <section class="my-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h2 class="border-b">Helyezések</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-group list-group-flush alma">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span class="badge text-bg-primary rounded-pill">1</span>
+                                    A list item
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span class="badge text-bg-primary rounded-pill">2</span>
+                                    A second list item
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span class="badge text-bg-primary rounded-pill">3</span>
+                                    A third list item
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="aboutUs">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h2>Rólunk</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ea et corrupti ipsum explicabo
-                            voluptatum impedit odit assumenda nemo, repudiandae adipisci culpa, laboriosam quam tenetur
-                            nostrum quisquam labore. Provident, quae! Et illum placeat harum maiores. Fuga debitis porro
-                            harum provident consequuntur placeat. Nulla, nemo cupiditate. Non, distinctio sed? Ipsa
-                            officiis sed consequatur temporibus asperiores saepe a, quisquam earum excepturi id
-                            provident ab reiciendis explicabo maiores illo magnam aliquam repellat eius vero quo
-                            voluptatibus minima aspernatur nostrum quae? Ex quaerat aperiam maiores a recusandae
-                            asperiores magni consequatur corrupti officia sed eius tempora sequi fugiat esse pariatur,
-                            rem totam ad eveniet voluptatibus!</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <p><img class="w-50" src="" alt=""></p>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 pe-5">
+                            <h2>Rólunk</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ea et corrupti ipsum
+                                explicabo voluptatum impedit odit assumenda nemo, repudiandae adipisci culpa, laboriosam
+                                quam tenetur nostrum quisquam labore. Provident, quae! Et illum placeat harum maiores.
+                                Fuga debitis porro harum provident consequuntur placeat. Nulla, nemo cupiditate. Non,
+                                distinctio sed? Ipsa officiis sed consequatur temporibus asperiores saepe a, quisquam
+                                earum excepturi id provident ab reiciendis explicabo maiores illo magnam aliquam
+                                repellat eius vero quo voluptatibus minima aspernatur nostrum quae? Ex quaerat aperiam
+                                maiores a recusandae asperiores magni consequatur corrupti officia sed eius tempora
+                                sequi fugiat esse pariatur, rem totam ad eveniet voluptatibus!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <p><img class="w-100 rounded" src="img/computerClassroom.webp" alt="gépterem"
+                                    title="Irodánk"></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
-    <footer class="mt-4 py-3 bg-black text-white">
-        <p class="text-center m-0">Minden jog fenntartva!</p>
+    <footer class="p-3 bg-black text-white">
+        <p class="text-center m-0">Minden jóg fenntartva!</p>
     </footer>
 
-
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="bejelentkezes">
@@ -137,9 +150,8 @@
             </div>
         </div>
     </div>
+
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/Felhasznalo.js"></script>
-    <script src="js/bejelentkezes.js"></script>
     <script src="js/DinosJatek.js"></script>
     <script src="js/script.js"></script>
 </body>
