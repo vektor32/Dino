@@ -53,8 +53,8 @@ a:hover{
     border-radius: 25px;
     margin: 25px;
 }
-.score{
-    background-color: rgba(249, 248, 250, 0.692);
+.points{
+    background-color: rgba(249, 248, 250, 0.589);
     margin: auto 0;
     position: absolute;
     top: 0px;

@@ -28,7 +28,10 @@
             <section id="game">
                 <h1 class="text-center mb-4">Játék</h1>
                 <div class="jatek m-5 border border-success border-5 rounded-3">
-                    <div class="score">Idő: <span></span></div>
+                    <div class="points">
+                        <div class="time">Idő: <span></span></div>
+                        <div class="score">Pont: <span ></span></div>
+                    </div>
                 </div>
             </section>
             <section class="my-5">
@@ -38,10 +41,21 @@
                             <h2 class="border-b">Helyezések</h2>
                         </div>
                         <div class="col-lg-6">
+                            <table class="table m-0">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Helyezés</th>
+                                    <th scope="col">Név</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Pontszám</th>
+                                    </tr>
+                                </thead>
+                            </table>
                             <ul class="list-group list-group-flush alma">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <span class="badge text-bg-primary rounded-pill">1</span>
                                     A list item
+                                    <span class="pontszam"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     <span class="badge text-bg-primary rounded-pill">2</span>
