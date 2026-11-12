@@ -37,13 +37,18 @@ class DinosJatek{
         this.#element.remove()
         clearInterval(this.#moveInterval)
     }
-    move(){
-        this.#moveInterval = setInterval(()=>{
-            this.#x-=this.#speed
-            this.#element.style.left=this.#x+"%"
-            if(this.#x<=-10){
+    move() {
+        this.#moveInterval = setInterval(() => {
+            if (window.jatekVege) {
+                clearInterval(this.#moveInterval)
+                return
+            }
+            this.#x -= this.#speed
+            this.#element.style.left = this.#x + "%"
+            if (this.#x <= -10) {
                 this.remove()
             }
         }, 20)
     }
+
 }
