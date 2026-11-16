@@ -73,7 +73,6 @@ document.querySelector(".login").addEventListener('click', () => {
     nemJo = ((kereszt && vezetek && felhNev && emailHelyes) ? true : false)
 
     if (nemJo) {
-        alert("Sikeres be jelentkezés!")
         var modalElem = document.querySelector("#exampleModal")
         var modal = bootstrap.Modal.getInstance(modalElem)
         modal.hide()

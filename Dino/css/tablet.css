@@ -1,0 +1,73 @@
+@media screen and (max-width: 990px) {
+    .object {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+        padding: 0;
+        margin: 0;
+    }
+    .dino {
+        position: absolute;
+        width: 50px;
+        height: 80px;
+        padding: 0;
+        margin: 0;
+        object-fit: contain;
+        bottom: 0;
+        
+    }
+    .dino.jumping {
+        animation: jump 0.5s ease-in-out;
+    }
+    .tablazatos{
+        margin-top: 20px;
+    }
+    :root{
+        --speed:3s;
+    }
+}
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-25px);
+    }
+    20% {
+        transform: translateY(-50px);
+    }
+    30% {
+        transform: translateY(-130px);
+    }
+    40% {
+        transform: translateY(-135px);
+    }
+    50% {
+        transform: translateY(-125px);
+    }
+    60% {
+        transform: translateY(-120px);
+    }
+    70% {
+        transform: translateY(-115px);
+    }
+    75%{
+        transform: translateY(-100px);
+    }
+    80% {
+        transform: translateY(-95px);
+    }
+    85%{
+        transform: translateY(-85px);
+    }
+    90% {
+        transform: translateY(-65px);
+    }
+    95%{
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

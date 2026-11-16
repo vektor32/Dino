@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-body{
+
+body {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
     line-height: 1.5;
@@ -7,53 +8,64 @@ body{
     font-weight: 400;
 }
 
-main{
+main {
     background-color: #efefef;
 }
 
-ul li{
-    list-style-type: none;  
+ul li {
+    list-style-type: none;
 }
-.alma{
-    overflow:auto; 
-    height:200px;
+
+.alma {
+    overflow: auto;
+    height: 250px;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 17px;
 }
-a:hover{
+
+a:hover {
     color: rgb(79, 146, 79);
     font-weight: 500;
     border-radius: 3px;
 }
+
 .jatek {
     position: relative;
     height: 38vh;
     overflow: hidden;
     background-image: url("../img/background.png");
-    background-size:cover;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 .object {
     position: absolute;
     width: 60px;
     height: 60px;
     object-fit: contain;
+    padding: 0;
+    margin: 0;
 }
-.modal-content{
+
+.modal-content {
     width: 115%;
     margin-left: -50px;
     border-radius: 0;
 }
-.bejelentkezes{
-    background-color: rgb(224, 199, 248);
+
+.bejelentkezes {
+    background-color: rgb(67, 122, 70);
+    color: #fff;
     border-radius: 25px;
     margin: 25px;
 }
-.points{
+
+.points {
     background-color: rgba(249, 248, 250, 0.589);
     margin: auto 0;
     position: absolute;
@@ -66,8 +78,10 @@ a:hover{
 
 .dino {
     position: absolute;
-    width: 60px;
-    height: 70px;
+    width: 90px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
     object-fit: contain;
     bottom: 0;
 }
@@ -81,20 +95,41 @@ a:hover{
         transform: translateY(0);
     }
 
+    10% {
+        transform: translateY(-25px);
+
+    }
+
     20% {
+        transform: translateY(-50px);
+    }
+
+    30% {
         transform: translateY(-100px);
     }
 
     40% {
-        transform: translateY(-150px);
+        transform: translateY(-115px);
+    }
+
+    50% {
+        transform: translateY(-135px);
     }
 
     60% {
-        transform: translateY(-170px);
+        transform: translateY(-115px);
+    }
+
+    70% {
+        transform: translateY(-100px);
     }
 
     80% {
-        transform: translateY(-150px);
+        transform: translateY(-85px);
+    }
+
+    90% {
+        transform: translateY(-75px);
     }
 
     100% {
@@ -105,4 +140,56 @@ a:hover{
 .dino.crouching {
     transform: scaleY(0.6);
     transform-origin: bottom;
+}
+
+.elso .oszlop {
+    background-color: #daa520;
+    height: 220px;
+    color: #212529;
+}
+
+.masodik .oszlop {
+    background-color: #c0c0c0;
+    height: 165px;
+}
+
+.harmadik .oszlop {
+    background-color: #b65c36;
+    height: 120px;
+}
+
+.podium-step {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.oszlop span {
+    font-size: 200%;
+    font-weight: 800;
+    line-height: 1;
+}
+
+table th {
+    background-color: #327042 !important;
+    color: #fff !important;
+    padding: 10px !important;
+}
+
+table th:first-of-type {
+    border-top-left-radius: 10px;
+}
+
+table th:last-of-type {
+    border-top-right-radius: 10px;
+}
+
+:root {
+    --speed: 1.2s;
+}
+
+.hidde {
+    display: none !important;
+}
+.show{
+    display: block  !important;
 }

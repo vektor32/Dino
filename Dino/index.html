@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
     <title>Dino</title>
 </head>
 
@@ -17,8 +19,14 @@
                     <li><a href="#">Helyezések</a></li>
                     <li><a href="#">Játék</a></li>
                     <li><a href="#">Rólunk</a></li>
-                    <li><button type="button" class="btn btn-success" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">Bejelentkezés</button></li>
+                    <li><span class="bejelentkez">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Bejelentkezés</button>
+                        </span>
+                        <span class="kijelentkezes"><i class="bi bi-person-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i><button type="button"
+                                class="btn btn-danger ms-2 logout">Kijelentkezés</button></span>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -29,25 +37,54 @@
                 <h1 class="text-center mb-4">Játék</h1>
                 <div class="jatek m-5 border border-success border-5 rounded-3">
                     <div class="points">
-                        <div class="time">Idő: <span></span></div>
-                        <div class="score">Pont: <span ></span></div>
+                        <div class="time">Idő: <span class="min">00</span>:<span class="sec">00</span></div>
+                        <div class="score">Pont: <span>0</span></div>
                     </div>
                 </div>
             </section>
             <section class="my-5">
                 <div class="container">
+                    <h2>Helyezések</h2>
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="border-b">Helyezések</h2>
+                            <div class="row justify-content-center align-items-end g-2 g-md-3 korte">
+                                <div class="col-4 col-md-3 text-center masodik">
+                                    <div class="mb-2 szoveg">
+
+                                    </div>
+                                    <div
+                                        class="podium-step oszlop shadow-sm d-flex justify-content-center align-items-center">
+                                        <span class="rank-number">2</span>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-md-3 text-center elso">
+                                    <div class="mb-2 szoveg">
+
+                                    </div>
+                                    <div
+                                        class="podium-step oszlop shadow-sm d-flex justify-content-center align-items-center">
+                                        <span class="rank-number">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 col-md-3 text-center harmadik">
+                                    <div class="mb-2 szoveg">
+
+                                    </div>
+                                    <div
+                                        class="podium-step oszlop shadow-sm d-flex justify-content-center align-items-center">
+                                        <span class="rank-number">3</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 tablazatos">
                             <table class="table m-0">
                                 <thead>
                                     <tr>
-                                    <th scope="col">Helyezés</th>
-                                    <th scope="col">Név</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Pontszám</th>
+                                        <th scope="col">Helyezés</th>
+                                        <th scope="col" class="text-center">Név</th>
+                                        <th scope="col" class="text-end">Pontszám</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -79,11 +116,13 @@
                                 explicabo voluptatum impedit odit assumenda nemo, repudiandae adipisci culpa, laboriosam
                                 quam tenetur nostrum quisquam labore. Provident, quae! Et illum placeat harum maiores.
                                 Fuga debitis porro harum provident consequuntur placeat. Nulla, nemo cupiditate. Non,
-                                distinctio sed? Ipsa officiis sed consequatur temporibus asperiores saepe a, quisquam
+                                distinctio sed? Ipsa officiis sed consequatur <span class="text-success">Dino</span>
+                                temporibus asperiores saepe a, quisquam
                                 earum excepturi id provident ab reiciendis explicabo maiores illo magnam aliquam
                                 repellat eius vero quo voluptatibus minima aspernatur nostrum quae? Ex quaerat aperiam
                                 maiores a recusandae asperiores magni consequatur corrupti officia sed eius tempora
-                                sequi fugiat esse pariatur, rem totam ad eveniet voluptatibus!</p>
+                                sequi fugiat esse pariatur, rem totam ad eveniet <span class="text-success">Forever
+                                    !</span></p>
                         </div>
                         <div class="col-lg-4">
                             <p><img class="w-100 rounded" src="img/computerClassroom.webp" alt="gépterem"
@@ -93,68 +132,91 @@
                 </div>
             </section>
         </div>
+
     </main>
     <footer class="p-3 bg-black text-white">
         <p class="text-center m-0">Minden jóg fenntartva!</p>
     </footer>
 
-     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal jatekModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog ">
+            <div class="modal-content rounded-4 ">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center m-auto">Játék vége!</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <h5>Telsesítmény:</h5>
+                    <p>Idő: <span class="min">00</span>:<span class="sec">00</span> Pont: <span
+                            class="eredmeny">0</span></p>
+                    <p>Nézd meg hanyadik vagy!</p>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-success resetGame" data-bs-dismiss="modal">Új játék</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content bg-transparent">
                 <div class="bejelentkezes">
                     <div class="modal-header">
                         <h5 class="modal-title ms-3" id="exampleModalLabel">Bejelentkezés</h5>
-                        <button type="button" class="btn-close me-3" data-bs-dismiss="modal"
+                        <button type="button" class="btn-close bg- me-3" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body bg-white text-dark">
                         <form class="row g-3 needs-validation justify-content-center" novalidate>
                             <div class="col-md-12">
                                 <label for="validationCustom01" class="form-label">Kereszt név:</label>
-                                <input type="text" class="form-control validationCustom01" id="validationCustom01" required>
+                                <input type="text" class="form-control validationCustom01" id="validationCustom01"
+                                    required>
                                 <div class="invalid-feedback">
-                                        <p class="keresztNev"></p>
+                                    <p class="keresztNev"></p>
                                 </div>
                                 <div class="valid-feedback">
-                                        <p class="keresztNev"></p>
+                                    <p class="keresztNev"></p>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <label for="validationCustom02" class="form-label">Vezeték név:</label>
-                                <input type="text" class="form-control validationCustom02" id="validationCustom02" required>
-                                 <div class="invalid-feedback">
-                                        <p class="vezetekNev"></p>
+                                <input type="text" class="form-control validationCustom02" id="validationCustom02"
+                                    required>
+                                <div class="invalid-feedback">
+                                    <p class="vezetekNev"></p>
                                 </div>
                                 <div class="valid-feedback">
-                                        <p class="vezetekNev"></p>
+                                    <p class="vezetekNev"></p>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <label for="validationCustomUsername" class="form-label">Felhasználó név:</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                    <input type="text" class="form-control validationCustomUsername" id="validationCustomUsername"
-                                        aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" class="form-control validationCustomUsername"
+                                        id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         <p class="felhasznaloNev"></p>
-                                </div>
-                                <div class="valid-feedback">
+                                    </div>
+                                    <div class="valid-feedback">
                                         <p class="felhasznaloNev"></p>
-                                </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <label for="validationCustom03" class="form-label">Email cím:</label>
-                                <input type="email" class="form-control validationCustom03" id="validationCustom03" required>
+                                <input type="email" class="form-control validationCustom03" id="validationCustom03"
+                                    required>
                                 <div class="invalid-feedback">
-                                        <p class="emailCim"></p>
+                                    <p class="emailCim"></p>
                                 </div>
                                 <div class="valid-feedback">
-                                        <p class="emailCim"></p>
+                                    <p class="emailCim"></p>
                                 </div>
                             </div>
-                            <button class="btn btn-primary px-4 py-2 rounded-5 w-50 login"
+                            <button class="btn btn-dark px-4 py-2 rounded-5 w-50 login"
                                 type="button">Bejelentkezés</button>
+
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -164,13 +226,29 @@
             </div>
         </div>
     </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-5 ">
 
+        <div id="liveToast" class="toast" role="alert">
+            <div class="toast-header">
+                <strong class="me-auto">Dino játék</strong>
+                <small>Most</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+
+            <div class="toast-body">
+                <p><strong>Sikeres bejelentkezés!</strong></p>
+            </div>
+        </div>
+
+    </div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/Felhasznalo.js"></script>
     <script src="js/Dino.js"></script>
     <script src="js/DinosJatek.js"></script>
     <script src="js/bejelentkezes.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/DinosJatekTeszt.js"></script>
+    <script src="js/DinoTeszt.js"></script>
 </body>
 
 </html>
